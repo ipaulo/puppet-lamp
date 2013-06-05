@@ -24,6 +24,9 @@ Vagrant::Config.run do |config|
   
   # Trying to fix issues reported here: https://github.com/mitchellh/vagrant/issues/455 
   config.ssh.max_tries = 100
+  
+  # Change the memory allocation of the vm [default 512MB]
+  # config.vm.customize ["modifyvm", :id, "--memory", 2048]
 
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
